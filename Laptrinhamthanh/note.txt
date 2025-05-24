@@ -1,0 +1,14 @@
+pacman -Syu
+pacman -S mingw-w64-ucrt-x86_64-portaudio mingw-w64-ucrt-x86_64-mpg123
+
+pacman -S mingw-w64-ucrt-x86_64-gnuplot
+
+g++ -o program main.cpp wav_reader.cpp mp3_decoder.cpp audio_player.cpp audio_plot.cpp -I/ucrt64/include -L/ucrt64/lib -lportaudio -lmpg123
+
+./program.exe
+
+cd /d/Downloads/Laptrinhamthanh-20250524T174407Z-1-001/phan3
+
+g++ -o test Untitled1.cpp -std=c++11
+
+./test.exe
