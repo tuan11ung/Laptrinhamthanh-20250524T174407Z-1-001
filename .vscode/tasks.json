@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "g++",  // Sử dụng g++ thay vì gcc
+        "args": [
+          "-o",
+          "program",
+          "${workspaceFolder}/main.cpp",  // Đổi từ main.c sang main.cpp
+          "-L", "D:/ucrt64/lib",  // Đường dẫn đến thư viện
+          "-lportaudio"  // Liên kết với thư viện PortAudio
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "options": {
+          "cwd": "${workspaceFolder}"  // Đảm bảo task chạy từ thư mục gốc của project
+        }
+      }
+    ]
+  }
